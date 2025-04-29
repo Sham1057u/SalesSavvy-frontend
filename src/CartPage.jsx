@@ -15,7 +15,7 @@ const CartPage = () => {
   useEffect(() => {
     const fetchCartItems = async () => {
       try {
-        const response = await fetch("https://salessavvy-backend-production.up.railway.app/api/cart/items", {
+        const response = await fetch("https://salessavvy-backend-production.up.railway.app//api/cart/items", {
           credentials: "include", // Include session cookie
         });
         if (!response.ok) throw new Error("Failed to fetch cart items");
@@ -49,7 +49,7 @@ const CartPage = () => {
   // Remove item from the cart
   const handleRemoveItem = async (productId) => {
     try {
-      const response = await fetch("https://salessavvy-backend-production.up.railway.app/api/cart/delete", {
+      const response = await fetch("https://salessavvy-backend-production.up.railway.app//api/cart/delete", {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
