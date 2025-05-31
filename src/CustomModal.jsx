@@ -506,7 +506,7 @@ const ModifyUserFormComponent = ({ onClose }) => {
 
       if (!userid) return;
 
-      const response = await fetch("https://salessavvy-backend-production.up.railway.app/admin/user/getbyid", {
+      const response = await fetch("https://salessavvy-backend-c2yc.onrender.com/admin/user/getbyid", {
         method: "POST",
         credentials: "include",
         headers: {
@@ -539,7 +539,7 @@ const ModifyUserFormComponent = ({ onClose }) => {
     const email = formData.get("email");
     const role = formData.get("role");
 
-    const response = await fetch("https://salessavvy-backend-production.up.railway.app/admin/user/modify", {
+    const response = await fetch("https://salessavvy-backend-c2yc.onrender.com/admin/user/modify", {
       method: "PUT",
       credentials: "include",
       headers: {

@@ -18,7 +18,7 @@ export default function LoginPage() {
     }
 
     try {
-      const response = await fetch("https://salessavvy-backend-production.up.railway.app/api/auth/login", {
+      const response = await fetch("https://salessavvy-backend-c2yc.onrender.com/api/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
