@@ -15,7 +15,7 @@ export default function RegistrationPage() {
     setError(null); // Clear previous errors
 
     try {
-      const response = await fetch('https://salessavvy-backend-c2yc.onrender.com', {
+      const response = await fetch('https://salessavvy-backend-c2yc.onrender.com/api/users/register',  {
         method: 'POST', 
         headers: {
           'Content-Type': 'application/json',
