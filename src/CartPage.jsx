@@ -15,7 +15,7 @@ const CartPage = () => {
   useEffect(() => {
     const fetchCartItems = async () => {
       try {
-        const response = await fetch("https://salessavvy-backend-c2yc.onrender.com//api/cart/items", {
+        const response = await fetch("https://salessavvy-backend-c2yc.onrender.com/api/cart/items", {
           credentials: "include", // Include session cookie
         });
         if (!response.ok) throw new Error("Failed to fetch cart items");
@@ -29,7 +29,9 @@ const CartPage = () => {
           })) || []
         );
         setOverallPrice(parseFloat(data?.cart?.overall_total_price || 0).toFixed(2));
-        setUsername(data?.username || ""); // Save the username from the response
+        setUsername(data?.username || "");// Save the username from the response
+      
+      
       } catch (error) {
         console.error("Error fetching cart items:", error);
       }
@@ -49,7 +51,7 @@ const CartPage = () => {
   // Remove item from the cart
   const handleRemoveItem = async (productId) => {
     try {
-      const response = await fetch("https://salessavvy-backend-c2yc.onrender.com//api/cart/delete", {
+      const response = await fetch("https://salessavvy-backend-c2yc.onrender.com/api/cart/delete", {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -198,10 +200,16 @@ const CartPage = () => {
           <div className="cart-items">
             {cartItems.map((item) => (
               <div key={item.product_id} className="cart-item">
-                <img
-                  src={item.image_url || "https://via.placeholder.com/80?text=No+Image"}
-                  alt={item.name}
-                />
+               <img
+ // src={item.image_url || "/shipped.jpg"}
+ src="/shipped.jpg"
+  alt={item.name}
+  onError={(e) => {
+    e.target.onerror = null; // prevent loop
+    e.target.src = "/shipped.jpg"; // fallback if broken URL
+  }}
+/>
+
                 <div className="item-details">
                   <div className="item-info">
                     <h3>{item.name}</h3>

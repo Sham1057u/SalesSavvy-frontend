@@ -14,6 +14,11 @@ export default function RegistrationPage() {
     e.preventDefault();
     setError(null); // Clear previous errors
 
+
+
+    
+
+
     try {
       const response = await fetch('https://salessavvy-backend-c2yc.onrender.com/api/users/register',  {
         method: 'POST', 
