@@ -16,7 +16,7 @@ export default function Contact() {
       <h2>Follow Us</h2>
       <ul style={{ listStyle: 'none', paddingLeft: 0 }}>
         <li><strong>GitHub:</strong> <a href="https://github.com/Sham1057u" target="_blank" rel="noopener noreferrer">github.com/Sham1057u</a></li>
-        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/shamanthachar/" target="_blank" rel="noopener noreferrer">linkedin.com</a></li>
+        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/shamanthachar/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/shamanthachar/</a></li>
       </ul>
 
       <p>We’ll get back to you as soon as possible. Thank you for choosing SalesSavvy!</p>
