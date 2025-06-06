@@ -29,7 +29,7 @@ export default function CustomerHomePage() {
       const data = await response.json();
       if(data)
      { 
-      setUsername(data.user?.name || 'shamanth'); // Extract username
+      setUsername(data.user?.name || 'WELCOME'); // Extract username
       setProducts(data.products || []);
     }else{
       setProducts([]);
