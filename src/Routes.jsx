@@ -7,6 +7,8 @@ import CartPage from "./CartPage";
 import OrderPage from "./OrderPage";
 import AdminLogin from "./AdminLogin"; 
 import AdminDashboard from "./AdminDashboard";
+import AboutUs from "./assets/AboutUs";
+import Contact from "./Contact";
 
 const AppRoutes = () => {
   return (
@@ -17,6 +19,9 @@ const AppRoutes = () => {
       <Route path="/UserCartPage" element={<CartPage />} />
       <Route path="/orders" element={<OrderPage />} />
       <Route path="/admin" element={<AdminLogin />} />
+      <Route path="/AboutUs" element={<AboutUs />} />
+      <Route path="/Contact" element={<Contact />} />
+
       <Route path="/admindashboard" element={<AdminDashboard />} />
     </Routes>
   );
