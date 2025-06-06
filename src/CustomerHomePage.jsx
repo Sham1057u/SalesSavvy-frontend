@@ -23,13 +23,13 @@ export default function CustomerHomePage() {
   const fetchProducts = async (category = '') => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/products${category ? `?category=${category}` : '?category=Shirts'}`, 
+        `https://salessavvy-backend-c2yc.onrender.com/api/products${category ? `?category=${category}` : '?category=Shirts'}`, 
         { credentials: 'include' } // Include authToken as a cookie
       );
       const data = await response.json();
       if(data)
      { 
-      setUsername(data.user?.name || 'Guest'); // Extract username
+      setUsername(data.user?.name || 'shamanth'); // Extract username
       setProducts(data.products || []);
     }else{
       setProducts([]);
@@ -44,7 +44,7 @@ export default function CustomerHomePage() {
   const fetchCartCount = async () => {
     setIsCartLoading(true); // Set loading state
     try {
-      const response = await fetch(`http://localhost:8080/api/cart/items/count?username=${username}`, {
+      const response = await fetch(`https://salessavvy-backend-c2yc.onrender.com/api/cart/items/count?username=${username}`, {
         credentials: 'include', // Include authToken as a cookie
       });
       const count = await response.json();

@@ -20,7 +20,7 @@ export default function RegistrationPage() {
 
 
     try {
-      const response = await fetch('http://localhost:8080/api/users/register',  {
+      const response = await fetch('https://salessavvy-backend-c2yc.onrender.com/api/users/register',  {
         method: 'POST', 
         headers: {
           'Content-Type': 'application/json',
